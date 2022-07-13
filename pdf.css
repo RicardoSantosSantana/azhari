@@ -1,0 +1,77 @@
+@media print {
+    body {
+        margin-left: 0px;
+        margin-top: 0px;
+        font-family: "Lato", sans-serif;
+        line-height: 15px;
+        font-size: 0.9em;
+        color: black;
+    }
+    .separa {
+        font-size: 3px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .imagem {
+        width: 370px;
+        height: 150px;
+        float: left;
+        padding-top: 10px;
+    }
+    img {
+        margin-top: 3px;
+        max-width: 350px;
+        max-height: 130px;
+        width: auto;
+        height: auto;
+        margin-left: 10%;
+        margin-right: -10%;
+    }
+    .titulo {
+        float: right;
+        width: 300px;
+        height: 150px;
+        font-size: 15px;
+        text-align: right;
+        vertical-align: center;
+        padding: 5px;
+    }
+    .orcamento {
+        font-weight: bold;
+        font-size: 1.5em;
+        text-align: right;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+    p {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 1em;
+    }
+    .emissor {
+        margin-bottom: 0px;
+        font-size: 0.9em;
+    }
+    .principal {
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #808080;
+    }
+    .principal2 {
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: 2px;
+        border-bottom: 1px solid #808080;
+    }
+    .direita {
+        text-align: right;
+    }
+    .cliente {
+        margin-top: 20px;
+        text-align: left;
+    }
+    .tabela {
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,56 @@
+<button onclick="generatePDF()">Download as PDF</button>
+
+<div id="invoice">
+
+    <div class="principal2">
+        <table class="tabela" width="90%">
+            <tr>
+                <td width="50%"><strong>Data Emissão: </strong>{{g_dataExtenso}}</td>
+                <td width="50%" class="direita">
+                    <strong>Situa&ccedil;&atilde;o do Orçamento: </strong> Aguardando Retorno
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" style='text-align:justify;'>{{g_descricao}}<br></td>
+            </tr>
+        </table>
+        <br>
+        <table class="tabela" width="700px">
+            <tr>
+                <td colspan="2"><strong>Dados do Cliente</strong></td>
+            </tr>
+            <tr>
+                <td width="70%"><strong>Nome: </strong> {{c_nome}}</td>
+                <td width="30%" class="direita"><strong>Telefone: </strong>{{c_celular}}</td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Endere&ccedil;o: </strong>{{c_endereco}} - {{c_cidades}}/{{c_estados}} - CEP: {{c_cep}}</td>
+            </tr>
+        </table>
+        <br>
+    </div>
+    <div class="principal">
+        <table cellspacing="10" cellpadding="4" width="100%">
+            <tr>
+                <td><strong>Descri&ccedil;&atilde;o</strong></td>
+                <td><strong>Valor Unitario</strong></td>
+                <td><strong>Quantidade</strong></td>
+                <td><strong>Total</strong></td>
+            </tr>
+            {{g_listaProduto}}
+        </table>
+    </div>
+    <div class="cliente"><strong>Outras Informa&ccedil;&otilde;es</strong>
+        <p style='text-align:justify;'>{{g_outrasInformacoes}}</p>
+    </div>
+    <br>
+    <p><strong>Or&ccedil;amento v&aacute;lido at&eacute;: </strong> {{g_validade}}</p>
+    <p><strong>Garantia at&eacute;: </strong> {{g_garantia}}</p>
+    <p><strong>Forma de Pagamento: </strong> {{g_formapagamento}}</p>
+</div>
+</body>
+
+</html>
