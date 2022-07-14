@@ -18,134 +18,155 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">
-            <h1>Hello, worldddd!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+            <div class="col-md-4"><img src="./src/assets/images/logoAzhari.png"></div>
+            <div class="col-md-8">
+                <h1>Gerador de Orçamento</h1>
+                <p>Para gerar o orçamento basta preencher os campos abaixo e clicar em "Gerar PDF".</p>
+            </div>
         </div>
     </div>
 
     <div class="container">
 
         <div class="row">
-            <div class="col-md-12" id="emissor">
+            <div class="col-lg-12" id="emissor">
                 <h2>DADOS EMISSOR</h2>
 
                 <p>Informe abaixo os dados de sua empresa.</p>
-
-                <div class="input-group">
-                    <span class="input-group-addon"><strong>NOME</strong></span>
-                    <input autocomplete="on" class="form-control" value="" type="text" name="emissor_nome" id="emissor_nome" placeholder="Nome ou Razão Social" maxlength="50" required="">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon"><strong>NOME</strong></span>
+                        <input autocomplete="on" class="form-control" value="Nome da Empresa" type="text" name="emissor_nome" id="emissor_nome" placeholder="Nome ou Razão Social" maxlength="50" required="">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><strong>TELEFONE</strong></span>
+                        <input autocomplete="on" class="form-control" value="(11) 5555-5555" type="text" name="emissor_telefone" id="emissor_telefone" placeholder="Telefone com DDD" maxlength="15" required="">
+                    </div>
                 </div>
-                <div class="input-group">
-                    <span class="input-group-addon"><strong>TELEFONE</strong></span>
-                    <input autocomplete="on" class="form-control" value="" type="text" name="emissor_telefone" id="emissor_telefone" placeholder="Telefone com DDD" maxlength="15" required="">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon"><strong>E-MAIL</strong></span>
+                        <input autocomplete="on" class="form-control" value="email@empresa.com.br" type="text" name="emissor_email" id="emissor_email" placeholder="Email" maxlength="80" required="">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><strong>WEB SITE</strong></span>
+                        <input autocomplete="on" class="form-control" value="website.com.br" type="text" name="emissor_website" id="emissor_website" placeholder="Web Site" maxlength="80" required="">
+                    </div>
                 </div>
-                <div class="input-group">
-                    <span class="input-group-addon"><strong>E-MAIL</strong></span>
-                    <input autocomplete="on" class="form-control" value="" type="text" name="emissor_email" id="emissor_email" placeholder="Email" maxlength="80" required="">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <a class="btn btn-default" href="#" role="button">Detalhes do Emissor &raquo;</a>
+                    </div>
                 </div>
-                <div class="input-group">
-                    <span class="input-group-addon"><strong>WEB SITE</strong></span>
-                    <input autocomplete="on" class="form-control" value="" type="text" name="emissor_website" id="emissor_website" placeholder="Web Site" maxlength="80" required="">
-                </div>
-
-                <p class="input-group"><a class="btn btn-default" href="#" role="button">Detalhes do Emissor &raquo;</a></p>
             </div>
-            <div class="col-md-12" id="cliente">
+            <div class="col-lg-12" id="cliente">
                 <h2>DADOS CLIENTE</h2>
                 <p>Informe os dados do cliente.</p>
 
-                <div class="input-group">
-                    <span class="input-group-addon"><strong>NOME</strong></span>
-                    <input autocomplete="off" class="form-control" type="text" name="cliente_nome" id="cliente_nome" placeholder="Razão Social" maxlength="50" required="">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon"><strong>NOME</strong></span>
+                        <input autocomplete="off" class="form-control" type="text" name="cliente_nome" id="cliente_nome" placeholder="Razão Social" maxlength="50" required="">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><strong>ENDEREÇO</strong></span>
+                        <input autocomplete="off" class="form-control" value="" type="text" name="cliente_endereco" id="cliente_endereco" placeholder="Endereço" maxlength="80" required="">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><strong>TELEFONE</strong></span>
+                        <input autocomplete="on" class="form-control TELEFONE" type="text" name="cliente_telefone" id="cliente_telefone" placeholder="(11) 0000-0000" maxlength="15" required="">
+                    </div>
                 </div>
-
-                <div class="input-group">
-                    <span class="input-group-addon"><strong>ENDEREÇO</strong></span>
-                    <input autocomplete="off" class="form-control" value="" type="text" name="cliente_endereco" id="cliente_endereco" placeholder="Endereço" maxlength="80" required="">
-                </div>
-                <div class="input-group">
-
-                    <span class="input-group-addon"><strong>ESTADO</strong></span>
-                    <select class="form-control" title="Estados Brasileiros" name="estados" id="estados">
-                            <option value="">ESCOLHA O ESTADO</option>
-                            <option codigo="AC" value="Acre">ACRE</option>
-                            <option codigo="AL" value="Alagoas">ALAGOAS</option>
-                            <option codigo="AM" value="Amazonas">AMAZONAS</option>
-                            <option codigo="AP" value="Amapá">AMAPÁ</option>
-                            <option codigo="BA" value="Bahia">BAHIA</option>
-                            <option codigo="CE" value="Ceará">CEARÁ</option>
-                            <option codigo="DF" value="Distrito Federal">DISTRITO FEDERAL</option>
-                            <option codigo="ES" value="Espírito Santo">ESPÍRITO SANTOS</option>
-                            <option codigo="GO" value="Goiás">GOIÁS</option>
-                            <option codigo="MA" value="Maranhão">MARANHÃO</option>
-                            <option codigo="MG" value="Minas Gerais">MINAS GERAIS</option>
-                            <option codigo="MS" value="Mato Grosso do Sul">MATO GROSSO DO SUL</option>
-                            <option codigo="MT" value="Mato Grosso">MATO GROSSO</option>
-                            <option codigo="PA" value="Pará">PARÁ</option>
-                            <option codigo="PB" value="Paraíba">PARAÍBA</option>
-                            <option codigo="PE" value="Pernambuco">PERNAMBUCO</option>
-                            <option codigo="PI" value="Piauí">PIAUÍ</option>
-                            <option codigo="PR" value="Paraná">PARANÁ</option>
-                            <option codigo="RJ" value="Rio de Janeiro">RIO DE JANEIRO</option>
-                            <option codigo="RN" value="Rio Grande do Norte">RIO GRANDE DO NORTE</option>
-                            <option codigo="RO" value="Rondônia">RONDÔNIA</option>
-                            <option codigo="RR" value="Roraima">RORAIMA</option>
-                            <option codigo="RS" value="Rio Grande do Sul">RIO GRANDE DO SUL</option>
-                            <option codigo="SC" value="Santa Catarina">SANTA CATARINA</option>
-                            <option codigo="SE" value="Sergipe">SERGIPE</option>
-                            <option codigo="SP" value="São Paulo">SÃO PAULO</option>
-                            <option codigo="TO" value="Tocantins">TOCANTINS</option>
-                    </select>
-                </div>
-                <div class="input-group">
-                    <span class="input-group-addon"><strong>CIDADE</strong></span>
-                    <select class="form-control" title="Cidades" name="cidades" id="cidades">
-                            <option value="">ESCOLHA A CIDADE</option>                 
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon"><strong>ESTADO</strong></span>
+                        <select class="form-control" title="Estados Brasileiros" name="estados" id="estados">
+                                <option value="">ESCOLHA O ESTADO</option>
+                                <option codigo="AC" value="Acre">ACRE</option>
+                                <option codigo="AL" value="Alagoas">ALAGOAS</option>
+                                <option codigo="AM" value="Amazonas">AMAZONAS</option>
+                                <option codigo="AP" value="Amapá">AMAPÁ</option>
+                                <option codigo="BA" value="Bahia">BAHIA</option>
+                                <option codigo="CE" value="Ceará">CEARÁ</option>
+                                <option codigo="DF" value="Distrito Federal">DISTRITO FEDERAL</option>
+                                <option codigo="ES" value="Espírito Santo">ESPÍRITO SANTOS</option>
+                                <option codigo="GO" value="Goiás">GOIÁS</option>
+                                <option codigo="MA" value="Maranhão">MARANHÃO</option>
+                                <option codigo="MG" value="Minas Gerais">MINAS GERAIS</option>
+                                <option codigo="MS" value="Mato Grosso do Sul">MATO GROSSO DO SUL</option>
+                                <option codigo="MT" value="Mato Grosso">MATO GROSSO</option>
+                                <option codigo="PA" value="Pará">PARÁ</option>
+                                <option codigo="PB" value="Paraíba">PARAÍBA</option>
+                                <option codigo="PE" value="Pernambuco">PERNAMBUCO</option>
+                                <option codigo="PI" value="Piauí">PIAUÍ</option>
+                                <option codigo="PR" value="Paraná">PARANÁ</option>
+                                <option codigo="RJ" value="Rio de Janeiro">RIO DE JANEIRO</option>
+                                <option codigo="RN" value="Rio Grande do Norte">RIO GRANDE DO NORTE</option>
+                                <option codigo="RO" value="Rondônia">RONDÔNIA</option>
+                                <option codigo="RR" value="Roraima">RORAIMA</option>
+                                <option codigo="RS" value="Rio Grande do Sul">RIO GRANDE DO SUL</option>
+                                <option codigo="SC" value="Santa Catarina">SANTA CATARINA</option>
+                                <option codigo="SE" value="Sergipe">SERGIPE</option>
+                                <option codigo="SP" value="São Paulo">SÃO PAULO</option>
+                                <option codigo="TO" value="Tocantins">TOCANTINS</option>
                         </select>
-                </div>
-                <div class="input-group">
-                    <span class="input-group-addon"><strong>CEP</strong></span>
-                    <input autocomplete="off" class="form-control CEP" type="text" name="cliente_cep" id="cliente_cep" placeholder="00000-000" maxlength="9" required="">
-                </div>
-                <div class="input-group">
-                    <span class="input-group-addon"><strong>TELEFONE</strong></span>
-                    <input autocomplete="on" class="form-control TELEFONE" type="text" name="cliente_telefone" id="cliente_telefone" placeholder="(11) 0000-0000" maxlength="15" required="">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><strong>CIDADE</strong></span>
+                        <select class="form-control" title="Cidades" name="cidades" id="cidades">
+                                <option value="">ESCOLHA A CIDADE</option>                 
+                            </select>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><strong>CEP</strong></span>
+                        <input autocomplete="off" class="form-control CEP" type="text" name="cliente_cep" id="cliente_cep" placeholder="00000-000" maxlength="9" required="">
+                    </div>
                 </div>
 
             </div>
             <div class="col-md-12" id="orcamento">
-                <h2>DADOS ORCAMENTO</h2>
+                <h2>DADOS ORÇAMENTO</h2>
                 <p>Informe os dados do orçamento.</p>
 
-                <div class="input-group">
-                    <span class="input-group-addon"><strong>NÚMERO</strong></span>
-                    <input autocomplete="on" class="form-control" type="text" name="orcamento_numero" id="orcamento_numero" placeholder="NUMERO DO ORÇAMENTO" maxlength="10" required="">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon"><strong>NÚMERO</strong></span>
+                        <input autocomplete="on" class="form-control" type="text" name="orcamento_numero" id="orcamento_numero" placeholder="NUMERO DO ORÇAMENTO" maxlength="10" required="">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><strong>DATA</strong></span>
+                        <input autocomplete="off" required class="form-control" value="" type="date" name="orcamento_data" id="orcamento_data" placeholder="DATA" maxlength="16" required="">
+                    </div>
                 </div>
-                <div class="input-group">
-                    <span class="input-group-addon"><strong>DATA</strong></span>
-                    <input autocomplete="off" required class="form-control" value="" type="date" name="orcamento_data" id="orcamento_data" placeholder="DATA" maxlength="16" required="">
-
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon"><strong>VÁLIDO ATÉ</strong></span>
+                        <input autocomplete="on" class="form-control" value="" type="date" name="orcamento_valido_ate" id="orcamento_valido_ate" placeholder="VÁLIDO ATÉ" maxlength="16" required="">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><strong>GARANTIA</strong></span>
+                        <input autocomplete="on" class="form-control" value="" type="date" name="orcamento_garantia" id="orcamento_garantia" placeholder="GARANTIA" maxlength="16" required="">
+                    </div>
                 </div>
-                <div class="input-group">
-                    <span class="input-group-addon"><strong>VÁLIDO ATÉ</strong></span>
-                    <input autocomplete="on" class="form-control" value="" type="date" name="orcamento_valido_ate" id="orcamento_valido_ate" placeholder="VÁLIDO ATÉ" maxlength="16" required="">
+                <div class="col-sm-12">
+                    <div class="input-group">
+                        <span class="input-group-addon"><strong>FORMA DE PAGAMENTO</strong></span>
+                        <input autocomplete="on" class="form-control" value="" type="text" name="orcamento_forma_pagamento" id="orcamento_forma_pagamento" placeholder="FORMA DE PAGAMENTO" maxlength="50" required="">
+                    </div>
                 </div>
-                <div class="input-group">
-                    <span class="input-group-addon"><strong>GARANTIA</strong></span>
-                    <input autocomplete="on" class="form-control" value="" type="date" name="orcamento_garantia" id="orcamento_garantia" placeholder="GARANTIA" maxlength="16" required="">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon"><strong>DESCRIÇÃO</strong></span>
+                        <textarea class="form-control" value="" name="orcamento_descricao" id="orcamento_descricao" placeholder="DESCRIÇÃO" cols="4" rows="5"></textarea>
+                    </div>
                 </div>
-                <div class="input-group">
-                    <span class="input-group-addon"><strong>FORMA DE PAGAMENTO</strong></span>
-                    <input autocomplete="on" class="form-control" value="" type="text" name="orcamento_forma_pagamento" id="orcamento_forma_pagamento" placeholder="FORMA DE PAGAMENTO" maxlength="50" required="">
-                </div>
-                <div class="input-group">
-                    <span class="input-group-addon"><strong>DESCRIÇÃO</strong></span>
-                    <textarea class="form-control" value="" name="orcamento_descricao" id="orcamento_descricao" placeholder="DESCRIÇÃO" cols="4" rows="5"></textarea>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon"><strong>OUTRAS INFORMAÇÕES</strong></span>
+                        <textarea class="form-control" value="" name="orcamento_informacoes" id="orcamento_informacoes" placeholder="OUTRAS INFORMAÇÕES" cols="4" rows="5"></textarea>
+                    </div>
                 </div>
             </div>
-
-
             <div class="col-md-12" id="produto">
                 <h2>PRODUTOS / SERVIÇOS</h2>
                 <p>Produtos ou Serviço.</p>
@@ -176,37 +197,36 @@
                     <textarea class="form-control" value="" name="orcamento_descricao" id="orcamento_descricao" placeholder="DESCRIÇÃO" cols="4" rows="5"></textarea>
                 </div>
             </div>
-
         </div>
 
-        <hr>
-
-        <div class="col-md-12" style="height: auto !important; min-height: 0px !important;">
-            <div class="titulo-formulario"> Para gerar o documento, preencha o formulário abaixo.</div>
-            <div id="modal_mensagens" style="display: none;overflow: hidden !important;">
-                <div class=" ">
-                    <div class="titulo_erro">Preenchimento Obrigatório.</div>
-                    <div class=" " id="error_message_recibo"></div>
-                    <p class="tright">
-                        <button data-value="1" data-fancybox-close="" class="  btn-fancy"> Fechar </button>
-                    </p>
+        <br>
+        <div class="col-sm-12">
+            <!--button onclick="generatePDF()">Download as PDF</!--button-->
+            <button onclick="imprimirNavegador()">IMPRIMIR NAVEGADOR</button>
+        </div>
+    </div>
+    <!-- /container -->
+    <br>
+    <div class="jumbotron">
+        <div class="container">
+            <div class="titulo-formulario"> Para gerar o documento, preencha o formulário e clique no botão Gerar PDF.</p>
+                <div id="modal_mensagens" style="display: none;overflow: hidden !important;">
+                    <div class=" ">
+                        <div class="titulo_erro">Preenchimento Obrigatório.</div>
+                        <div class=" " id="error_message_recibo"></div>
+                        <p class="tright">
+                            <button data-value="1" data-fancybox-close="" class="  btn-fancy"> Fechar </button>
+                        </p>
+                    </div>
                 </div>
+                <footer>
+                    <p>&copy; 2022 NEED Solution</p>
+                </footer>
             </div>
-
-            <footer>
-                <p>&copy; 2016 Company, Inc.</p>
-            </footer>
         </div>
-        <!-- /container -->
-
-        <!--button onclick="generatePDF()">Download as PDF</!--button-->
-        <button onclick="imprimirNavegador()">IMPRIMIR NAVEGADOR</button>
-
-
-
+    </div>
+       
 </body>
-
-
 
 <script type="module" src="./boostrap/app.js"></script>
 
