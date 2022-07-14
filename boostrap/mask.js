@@ -44,7 +44,7 @@
              element[1].addEventListener("focus", function(e) {
                  this.classList.add("input-lg");
                  this.classList.add("app-input-text");
-                 this.parentElement.classList.remove("input-group");
+                 this.parentElement.classList.remove("input-group"); 
                  this.previousElementSibling.classList.remove("input-group");
                  this.previousElementSibling.style.display = "none";
              })

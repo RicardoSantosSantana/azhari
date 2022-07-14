@@ -3,7 +3,7 @@ export const estados_cidades = {
     dataJSON: response => response.json(),
     clickEstado: function() {
         const estado = document.getElementById('estados');
-        estado.addEventListener("change", (e) => {
+        estado?.addEventListener("change", (e) => {
             this.changeOptionsCity(e.target.value)
         })
     },

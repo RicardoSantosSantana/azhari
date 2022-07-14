@@ -5,3 +5,36 @@
 .app-input-text {
     width: 100%;
 }
+
+.lista-produtos-linha {
+    border-bottom: 1px dashed #eae6e6;
+    margin: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+ 
+.titulo {
+
+    font-weight: bold;
+    padding-bottom: 10px;
+    display:flex;
+    justify-content:space-between;
+    font-size:1.6rem;
+}
+ 
+
+ 
+.list {
+    
+    
+    opacity: 1;
+    -webkit-transition: opacity 1000ms linear;
+    transition: opacity 1000ms linear;
+    padding-top:10px;
+    background-color: #ddd;
+    background-image: linear-gradient(to top right, #EFEEEE, white);
+    margin-top:4px;
+    padding:10px;
+    border-radius: 04px;
+    
+}
