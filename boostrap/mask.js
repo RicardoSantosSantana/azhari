@@ -50,9 +50,10 @@
              })
          });
      },
-     lostfocus: function() {
+
+     lostfocus: function(evento) {
          this.arrayElements("form-control").forEach(element => {
-             element[1].addEventListener("blur", function(e) {
+             element[1].addEventListener(evento, function(e) {
                  this.classList.remove("input-lg");
                  this.classList.remove("app-input-text");
                  this.previousElementSibling.style.display = "none";
