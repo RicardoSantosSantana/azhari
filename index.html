@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="pt-br">
-    <title></title>
+    <title>Orçamento</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -16,6 +16,7 @@
 <body>
     <div class="container">
         <div class="row">
+             
             <div class="col-md-12" id="produto">
                 <h2>PRODUTOS / SERVIÇOS</h2>
                 <p>Produtos ou Serviço.</p>                
@@ -24,21 +25,23 @@
                         <input autocomplete="on" class="form-control" type="text" name="orcamento_numero" id="orcamento_numero" placeholder="NUMERO DO ORÇAMENTO" maxlength="10" required="">
                     </div>    
                     <Br>
-                    <button onclick="addProduto()">Adicionar produtos</button>
-                    <button class="btn btn-success" onclick="getLista()">Lista de Produtos</button>
+                    
                     <div id="itens-produtos"></div>
+                    <button class="btn btn-default" onclick="addProduto()">Adicionar produtos</button>
+                    <button class="btn btn-success" onclick="getLista()">Lista de Produtos</button>
             </div>            
         </div>
     </div>
 </body>
 
-<script type="module" src="./boostrap/app.js"></script>
+<script type="module" src="./src/boostrap/app.js"></script>
 
 <script>
-    const app = import("./boostrap/app.js");
+    const app = import("./src/boostrap/app.js");
     const addProduto = () => app.then(module =>  module.app.orcamento.html.generate("itens-produtos"))    
     const removeProduto = (id) => app.then(module =>  module.app.orcamento.data.remove(id))     
     const getLista = () => app.then(module =>  module.app.orcamento.data.values()).then(console.log)
+ 
 </script>
 
 </html>
