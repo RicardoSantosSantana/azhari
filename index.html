@@ -15,9 +15,7 @@
 
 <body>
     <div class="container">
-
         <div class="row">
-
             <div class="col-md-12" id="produto">
                 <h2>PRODUTOS / SERVIÇOS</h2>
                 <p>Produtos ou Serviço.</p>                
@@ -27,34 +25,20 @@
                     </div>    
                     <Br>
                     <button onclick="addProduto()">Adicionar produtos</button>
-            
+                    <button class="btn btn-success" onclick="getLista()">Lista de Produtos</button>
                     <div id="itens-produtos"></div>
-            </div>
-
-          
-            
+            </div>            
         </div>
-
-
+    </div>
 </body>
 
 <script type="module" src="./boostrap/app.js"></script>
+
 <script>
-   
-window.addEventListener("load",()=>import("./boostrap/app.js").then(module => module.app.init())); 
-async function addProduto(){
-   import("./boostrap/app.js").then(module =>  module.app.orcamento)
-   .then(orcamento=>orcamento.ADD())
-      
-}
-
-function removeProduto(id){
-
-    const lista = document.getElementById(`lista-produtos_${id}`);
-    lista.style.opacity = '0';
-    setTimeout(() =>  lista.remove(), 1000);   
-  
-}
+    const app = import("./boostrap/app.js");
+    const addProduto = () => app.then(module =>  module.app.orcamento.html.generate("itens-produtos"))    
+    const removeProduto = (id) => app.then(module =>  module.app.orcamento.data.remove(id))     
+    const getLista = () => app.then(module =>  module.app.orcamento.data.values()).then(console.log)
 </script>
 
 </html>

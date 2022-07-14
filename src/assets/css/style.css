@@ -26,10 +26,9 @@
  
 .list {
     
-    
     opacity: 1;
-    -webkit-transition: opacity 1000ms linear;
-    transition: opacity 1000ms linear;
+    -webkit-transition: opacity 500ms linear;
+    transition: opacity 500ms linear;
     padding-top:10px;
     background-color: #ddd;
     background-image: linear-gradient(to top right, #EFEEEE, white);
