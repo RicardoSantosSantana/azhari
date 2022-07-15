@@ -12,6 +12,21 @@
              })
          });
      },
+     quantidade: function() {
+        this.arrayElements("quantidade").forEach(element => {
+            element[1].addEventListener("keypress", function(e) {
+                this.value = this.value.replace(/[^\d]+/g, '');
+                this.value = this.value.replace(/[^\d]+/g, '');                            
+            })
+        });
+    },
+    valor: function() {
+        this.arrayElements("valor").forEach(element => {
+            element[1].addEventListener("keypress", function(e) {
+                this.value = this.value.replace(/[^\d]+/g, '');                                            
+            })
+        });
+    },
      telefone: function() {
          this.arrayElements("TELEFONE").forEach(element => {
 

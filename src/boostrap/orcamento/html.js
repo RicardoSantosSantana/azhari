@@ -45,14 +45,14 @@ export const html = {
                               <div class="input-group">
                                   <span class="input-group-addon">
                                   <strong>Valor</strong>
-                                  </span> <input autocomplete="on" class="form-control valor"  value="${item.valor}" placeholder="Valor do Recibo" maxlength="15">
+                                  </span> <input autocomplete="on"  type="number"  class="form-control valor"  value="${item.valor}" placeholder="Valor do Recibo" maxlength="15">
                               </div>
                           </div>
                           <div class="col-md-6">
                               <div class="input-group m-bot15">
                                   <span class="input-group-addon m-bot15 btn-white">
                                   <strong>Qtd.</strong>
-                                  </span> <input autocomplete="on" class="form-control quantidade" value="${item.quantidade}" placeholder="Quantidade" maxlength="5">
+                                  </span> <input autocomplete="on" type="number" class="form-control quantidade" value="${item.quantidade}" placeholder="Quantidade" maxlength="7">
                               </div>
                           </div>
                       </div>                                 

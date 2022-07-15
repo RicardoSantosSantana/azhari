@@ -20,7 +20,7 @@
         <div class="row">
              
             <div class="col-md-12" id="produto">
-                <h1>PRODUTOS / SERVIÇOS</h1>
+                <h1>PRODUTOS / SERVICOS</h1>
                              
                     <div class="input-group">
                         <span class="input-group-addon"><strong>Nome</strong></span>
@@ -33,7 +33,7 @@
 
                     <button class="btn btn-default" onclick="addProduto()">Adicionar produtos</button>
                     <button class="btn btn-success" onclick="getLista()">Lista de Produtos</button>
-                    <button class="btn btn-danger" onclick="viewProduto()">VISUALIZAR PRODUTOS</button>
+           
             </div>            
         </div>
     </div>
@@ -42,37 +42,12 @@
 <script type="module" src="./src/boostrap/app.js"></script>
 
 <script>
-    const app = import("./src/boostrap/app.js");
-    //const addProduto = () => app.then(module =>  module.app.orcamento.html.generate("itens-produtos"))    
-    const addProduto = () => app.then(module => { module.app.orcamento.produtos.insert("","",0,0)})    
-
-    const removerProduto = (id) => app.then(module =>  module.app.orcamento.produtos.remove(id))   
-
-    const getLista = () => app.then(module =>  module.app.orcamento.data.values()).then(console.log)
-
- 
-
-function report(data){
-
-    linhas = data.map(el  =>{
-        return (`<li><strong>ID: </strong> ${el.id}</li>
-                <li><strong>DESCRICAO: </strong> ${el.descricao}</li>
-                <li><strong>MEDIDA: </strong> ${el.medida}</li>
-                <li><strong>VALOR: </strong> ${el.valor}</li>
-                <li><strong>QUANTIDADE: </strong> ${el.quantidade}</li>`)
-            }).join('<hr>')
-    return `<ul>${linhas}</ul>`;
-
-}
-function viewProduto(){
- 
-     app
-     .then(module=>module.app.orcamento.produtos.data)
-     .then(data=>report(data))
-     .then(html=>document.getElementById("itens-view-produtos").innerHTML = html)
-     
     
-}
+    const app = import("./src/boostrap/app.js");
+
+    const addProduto = () => app.then(module => { module.app.orcamento.produtos.insert("","",0,0) });    
+    const removerProduto = (id) => app.then (module =>  module.app.orcamento.produtos.remove(id) ); 
+    const getLista = () => app.then(module =>  module.app.orcamento.data.values()).then(console.log);
 
 </script>
 
