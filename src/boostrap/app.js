@@ -7,12 +7,6 @@ import { orcamento } from "./orcamento.js";
      mask,
      estados_cidades,
      orcamento,
-     partial: async function (template) {   
-            return await fetch(window.location.href +`src/template/${template}.html` )
-                .then(response=> response.text())
-                .then(html=>document.getElementById(template).innerHTML= html)
-     }
-     ,
      init: () => {
          mask.focus();
          mask.lostfocus("blur");

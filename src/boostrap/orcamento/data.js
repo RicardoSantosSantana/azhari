@@ -10,6 +10,7 @@ export const data = {
     },
     values:function(){
       const dados = [];
+      
       const lista = document.getElementsByClassName("list"); 
 
       Object.entries(lista).forEach(elemento=>{      

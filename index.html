@@ -10,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="http://fonts.cdnfonts.com/css/broken-cyborg" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/templo-kolegio" rel="stylesheet">
     <link rel="stylesheet" href="./src/assets/css/style.css">
 </head>
 
@@ -18,8 +20,8 @@
         <div class="row">
              
             <div class="col-md-12" id="produto">
-                <h2>PRODUTOS / SERVIÇOS</h2>
-                <p>Produtos ou Serviço.</p>                
+                <h1>PRODUTOS / SERVIÇOS</h1>
+                             
                     <div class="input-group">
                         <span class="input-group-addon"><strong>Nome</strong></span>
                         <input autocomplete="on" class="form-control" type="text" name="orcamento_numero" id="orcamento_numero" placeholder="NUMERO DO ORÇAMENTO" maxlength="10" required="">
@@ -27,8 +29,11 @@
                     <Br>
                     
                     <div id="itens-produtos"></div>
+                    <div id="itens-view-produtos"></div>
+
                     <button class="btn btn-default" onclick="addProduto()">Adicionar produtos</button>
                     <button class="btn btn-success" onclick="getLista()">Lista de Produtos</button>
+                    <button class="btn btn-danger" onclick="viewProduto()">VISUALIZAR PRODUTOS</button>
             </div>            
         </div>
     </div>
@@ -38,10 +43,37 @@
 
 <script>
     const app = import("./src/boostrap/app.js");
-    const addProduto = () => app.then(module =>  module.app.orcamento.html.generate("itens-produtos"))    
-    const removeProduto = (id) => app.then(module =>  module.app.orcamento.data.remove(id))     
+    //const addProduto = () => app.then(module =>  module.app.orcamento.html.generate("itens-produtos"))    
+    const addProduto = () => app.then(module => { module.app.orcamento.produtos.insert("","",0,0)})    
+
+    const removerProduto = (id) => app.then(module =>  module.app.orcamento.produtos.remove(id))   
+
     const getLista = () => app.then(module =>  module.app.orcamento.data.values()).then(console.log)
+
  
+
+function report(data){
+
+    linhas = data.map(el  =>{
+        return (`<li><strong>ID: </strong> ${el.id}</li>
+                <li><strong>DESCRICAO: </strong> ${el.descricao}</li>
+                <li><strong>MEDIDA: </strong> ${el.medida}</li>
+                <li><strong>VALOR: </strong> ${el.valor}</li>
+                <li><strong>QUANTIDADE: </strong> ${el.quantidade}</li>`)
+            }).join('<hr>')
+    return `<ul>${linhas}</ul>`;
+
+}
+function viewProduto(){
+ 
+     app
+     .then(module=>module.app.orcamento.produtos.data)
+     .then(data=>report(data))
+     .then(html=>document.getElementById("itens-view-produtos").innerHTML = html)
+     
+    
+}
+
 </script>
 
 </html>
