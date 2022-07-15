@@ -21,8 +21,3 @@ import { orcamento } from "./orcamento.js";
 
  (function($){ window.addEventListener("load",()=>$.init()) ; })(app)
  
- export const addProduto = () => app.then(module => { module.app.orcamento.produtos.insert("","",0,0)})    
-
- const removerProduto = (id) => app.then(module =>  module.app.orcamento.produtos.remove(id))   
-
- const getLista = () => app.then(module =>  module.app.orcamento.data.values()).then(console.log)

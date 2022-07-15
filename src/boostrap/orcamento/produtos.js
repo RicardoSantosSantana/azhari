@@ -18,6 +18,7 @@ export const produtos = {
             "quantidade":this.getValue(elemento[1].id,"quantidade")
           });    
         });  
+        console.warn(dados)
         this.data = dados;
         return dados;
     },
@@ -36,7 +37,11 @@ export const produtos = {
         this.data=this.data.filter(el=>el.id!=id)   
         produtosProxy.renderizar()            
     },
- 
+    getDatabase:function(data){
+     
+        this.data = data
+        produtosProxy.renderizar()   
+    },
     renderizar:function(){
         document.getElementById("itens-produtos").innerHTML = html.generate(produtosProxy)
     }
